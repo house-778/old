@@ -629,11 +629,13 @@ function performSearch() {
         if (fileName.includes(searchQuery)) {
           var resultItem = document.createElement('button');
           resultItem.textContent = fileLinks[i].name;
-          resultItem.onclick = "go_to_page(" + fileLinks[i].link + ");";
+          // Correct way to assign the onclick event handler
+          resultItem.onclick = function() {
+              go_to_page(fileLinks[i].link);
+          };
           searchResultsDiv.appendChild(resultItem);
         }
     }
-}
 function openq() {
   document.getElementById("Quickaccess").style.width = "250px";
 }
