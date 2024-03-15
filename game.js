@@ -33,7 +33,7 @@ function go_to_page(url){
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href = "/game_asets/game.css">
+  <link rel="stylesheet" href = "game_a.css">
   <title>House - Game</title>
 </head>
 <body>
@@ -50,7 +50,7 @@ function go_to_page(url){
     <div id="searchResults"></div>
   </div>
   <iframe style="width: 100%; height: 100vh;"  class="game-iframe" id="game-area" src="${url}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-  <script src="/game_asets/game.js"></script>
+  <script src="game_a.js"></script>
   <script>
     function home(){
       window.location.reload();
