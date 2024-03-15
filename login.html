@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>House - Login</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="whatsnew.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/imges/House-symbol-may-be-unfamiliar-to-users-with-low-computer-literacy.ico">
+  
+</head>
+<style>
+  .hi{
+    color: #f5f5f5;
+  }
+</style>
+
+<body>
+  <div class = "Contanor">
+    <h1 class = "hi">Password</h1>
+    <h2 id = "pass">Password...</h2>
+    <p class = "little">By typing the password you are agreeing to our <a href="tc.html"> Terms & Conditions</a></p>
+    <style>
+      .little{
+        font-size: 0.575em;
+        color: #ffffff;
+      }
+      h2{
+        color: #ffffff;
+      }
+      body{
+        text-align: center;
+      }
+      .Contanor{
+        text-align: center;
+      }
+    </style>
+  </div>  
+  <script src="login.js"></script>
+  <script>
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location.href = "mobillog.html";
+  }
+  </script>
+  <div id="popup-container" class="popup-container">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h1>We Now have 575 games</h1>
+        <p>Please report any that dont work</p>
+    </div>
+    <script src="whatnew.js"></script>
+</div>
+</body>
+<script src="background.js"></script>
+</html>

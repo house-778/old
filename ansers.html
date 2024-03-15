@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>House</title>
+    <link rel="icon" type="image/x-icon" href="/imges/House-symbol-may-be-unfamiliar-to-users-with-low-computer-literacy.ico">
+  </head>
+  <script src="chech.js"></script>
+  <script src="game.js"></script>
+  </head>
+
+
+<body class = "">
+  <div class="navebar">
+    <br>
+    <button onclick='window.location.href = "games.html";'><span class="material-symbols-outlined">home</span></button>
+    <button style = "height: 50px;" onclick='window.location.href = "tc.html";'><span class="material-symbols-outlined">gavel</span></button>
+    <button onclick='window.location.href = "report.html";'><span class="material-symbols-outlined">bug_report</span></button>
+    <button onclick='window.location.href = "game_list.html";'><span class="material-symbols-outlined">stadia_controller</span></button>
+    <button id = "gra" style="float: right;" onclick='gra()'><span class="material-symbols-outlined">blur_on</span></button>
+    <button id = "dark" style="float: right;" onclick='dark()'><span class="material-symbols-outlined">dark_mode</span></button>
+    <button id = "light" style="float: right;" onclick='light()'><span class="material-symbols-outlined">light_mode</span></button>
+    <hr>
+    <script>
+      if(window.sessionStorage.admin != "yes"){
+        window.location.href = 'report.html';
+      }
+    </script>
+   <iframe style="border: none; width:100%; height:100vh" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__kJlkgVUMTNEOURRUjFMVVlUTEFIRFFERlNWQjVIQS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+</body>
+<script src="background.js"></script>
+</html>

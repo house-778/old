@@ -1,0 +1,195 @@
+.gra{
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff00cc, #00ffcc, #cc00ff, #ff00cc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s infinite;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+body.gra button,
+body.gra input[type=password],
+body.gra input[type=text],
+body.gra #searchInput {
+  background-color: #000000;
+  border: 1px solid #555555;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gra button:hover {
+  transform: scale(1.1);
+  background-color: #555555;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 4px 4px 10px rgba(250, 250, 250, 0.5);
+}
+.gra h1 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  /*margin-top: 50px;*/
+}
+
+.gra #pass{
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  padding: 10px; 
+  width: 200px;
+  height: 15px; 
+}
+
+input [type=password], input[type=text] {
+  width: 130px;
+  text-align: left;
+}
+
+input[type=text] {
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+.hiden, .hidden {
+  display: none;
+}
+
+.fit {
+  width: 100%;
+  left: 0;
+}
+
+.navebar {
+  top: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.dark{
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+  background: #000;
+  background-size: 400% 400%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+body.dark button,
+body.dark input[type=password],
+body.dark input[type=text],
+body.dark #searchInput {
+  background-color: #d8d7d7;
+  border: 1px solid #535353;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark button:hover {
+  transform: scale(1.1);
+  background-color: #d8d7d7;
+  border: 1px solid #535353;
+  color: #000000;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.dark h1 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  /*margin-top: 50px;*/
+}
+.dark #pass{
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  padding: 10px; 
+  width: 200px;
+  height: 15px; 
+}
+
+.light{
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+  background: #fff;
+  background-size: 400% 400%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+
+body.light button,
+body.light input[type=password],
+body.light input[type=text],
+body.light #searchInput {
+  background-color: #000000;
+  border: 1px solid #535353;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.light button:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+  border: 1px solid #535353;
+  color: #000000;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.light h1 {
+  color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+  /*margin-top: 50px;*/
+}
+
+.light #pass{
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 10px; 
+  width: 200px;
+  height: 15px; 
+}
