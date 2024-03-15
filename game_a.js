@@ -637,9 +637,7 @@ function performSearch() {
       if (fileName.includes(searchQuery)) {
         var resultItem = document.createElement('button');
         resultItem.textContent = fileLinks[i].name;
-        resultItem.onclick = function() {
-            go_to_page(fileLinks[i].link);
-        };
+        resultItem.setAttribute("onclick", go_to_page(fileLinks.link[i]));
         searchResultsDiv.appendChild(resultItem);
       }
   }
