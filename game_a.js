@@ -599,8 +599,8 @@ function go_to_page(url){
 }
 </style>
 <div class="Bside">
-  <a href="#home" class="home"><span onclick="home()" class="material-symbols-outlined">home</span>Home</a>
-  <a href="#Search" class="qac"><span onclick="openq()"><span class="material-symbols-outlined">search</span>Search</span> </a>
+  <a href="#home" class="home"><span onclick="home()"><span class="material-symbols-outlined">home</span>Home</span></a>
+  <a href="#Search" class="qac"><span onclick="openq()"><span class="material-symbols-outlined">search</span>Search</span></a>
 </div>
 
   <div id="Quickaccess" class="Qaccess">
@@ -626,24 +626,25 @@ function go_to_page(url){
 
 }
 function performSearch() {
-    var searchQuery = document.getElementById('search').value.toLowerCase();
-    var fileLinks = games();
-    var searchResultsDiv = document.getElementById('searchResults');
-    searchResultsDiv.innerHTML = ""; 
+  var searchQuery = document.getElementById('search').value.toLowerCase();
+  var fileLinks = games();
+  var searchResultsDiv = document.getElementById('searchResults');
+  searchResultsDiv.innerHTML = ""; 
 
-    for (var i = 0; i < fileLinks.length; i++) {
-        var fileName = fileLinks[i].name.toLowerCase();
+  for (var i = 0; i < fileLinks.length; i++) {
+      var fileName = fileLinks[i].name.toLowerCase();
 
-        if (fileName.includes(searchQuery)) {
-          var resultItem = document.createElement('button');
-          resultItem.textContent = fileLinks[i].name;
-          resultItem.onclick = function() {
-              go_to_page(fileLinks[i].link);
-          };
-          searchResultsDiv.appendChild(resultItem);
-        }
-    }
+      if (fileName.includes(searchQuery)) {
+        var resultItem = document.createElement('button');
+        resultItem.textContent = fileLinks[i].name;
+        resultItem.onclick = function() {
+            go_to_page(fileLinks[i].link);
+        };
+        searchResultsDiv.appendChild(resultItem);
+      }
+  }
 }
+
 function openq() {
   document.getElementById("Quickaccess").style.width = "250px";
 }
