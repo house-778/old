@@ -578,6 +578,45 @@ function games() {
     { name: 'zoom be', link: 'https://topvz.github.io/g72/zoom-be' },
     ];
 }
+function go_to_page(url){
+  var html = `
+<!DOCTYPE html>
+<script src="chech.js"></script>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href = "game_a.css">
+  <title>House - Game</title>
+</head>
+<body>
+<div class="Bside">
+  <a href="#home" class="home"><span onclick="home()" class="material-symbols-outlined">home</span>Home</a>
+  <a href="#Search" class="qac"><span onclick="openq()"><span class="material-symbols-outlined">search</span>Search</span> </a>
+</div>
+
+  <div id="Quickaccess" class="Qaccess">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeq()">&times;</a>
+    <h2>Search</h2>
+    <input type="search" id="search" placeholder="Search" oninput="performSearch()">
+    <br>
+    <div id="searchResults"></div>
+  </div>
+  <iframe style="width: 100%; height: 100vh;"  class="game-iframe" id="game-area" src="${url}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+  <script src="game_a.js"></script>
+  <script>
+    function home(){
+      window.location.reload();
+    }
+  </script>
+</body>
+</html>
+  `;
+  document.open();
+  document.write(html);
+  document.close();
+
+}
 function performSearch() {
     var searchQuery = document.getElementById('search').value.toLowerCase();
     var fileLinks = games();
@@ -588,9 +627,9 @@ function performSearch() {
         var fileName = fileLinks[i].name.toLowerCase();
 
         if (fileName.includes(searchQuery)) {
-          var resultItem = document.createElement('a');
+          var resultItem = document.createElement('button');
           resultItem.textContent = fileLinks[i].name;
-          resultItem.href = fileLinks[i].link;
+          resultItem.onclick = "go_to_page(" + fileLinks[i].link + ");";
           searchResultsDiv.appendChild(resultItem);
         }
     }
