@@ -590,7 +590,7 @@ function go_to_page(url){
   <title>House - Game</title>
 </head>
 <body>
-<div class = "hidden">
+<div id = "url"  class = "hidden">
   ${url}
 </div>
 <style>
@@ -637,20 +637,20 @@ function performSearch() {
         if (fileName.includes(searchQuery)) {
           var resultItem = document.createElement('button');
           resultItem.textContent = fileLinks[i].name;
-          // Correct way to assign the onclick event handler
           resultItem.onclick = function() {
               go_to_page(fileLinks[i].link);
           };
           searchResultsDiv.appendChild(resultItem);
         }
     }
+}
 function openq() {
   document.getElementById("Quickaccess").style.width = "250px";
 }
 function closeq() {
   document.getElementById("Quickaccess").style.width = "0";
 }
-var currentPage = window.location.pathname;
+var currentPage = document.getElementById('url').innerText.trim();
 var visitedPages = JSON.parse(localStorage.getItem('visitedPages')) || [];
 var pageIndex = visitedPages.indexOf(currentPage);
 if (pageIndex !== -1) {

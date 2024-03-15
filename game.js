@@ -37,7 +37,7 @@ function go_to_page(url){
   <title>House - Game</title>
 </head>
 <body>
-<div class = "hidden">
+<div id = "url"  class = "hidden">
   ${url}
 </div>
 <style>
@@ -87,7 +87,7 @@ function createButtons() {
   urls.forEach(url => {
     const button = document.createElement('button');
     button.textContent = getCleanButtonText(url);
-    button.setAttribute('onclick', "window.loaction.href = '"+url+"'");
+    button.setAttribute('onclick', "go_to_page('"+url+")");
     container.append(button);
   });
 }
