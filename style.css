@@ -193,3 +193,53 @@ body.light #searchInput {
   width: 200px;
   height: 15px; 
 }
+.red{
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+  background: #FF5733;
+  background-size: 400% 400%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+
+body.red button,
+body.red input[type=password],
+body.red input[type=text],
+body.red #searchInput {
+  background-color: #000000;
+  border: 1px solid #535353;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.red button:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+  border: 1px solid #535353;
+  color: #000000;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.red h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  /*margin-top: 50px;*/
+}
+
+.red #pass{
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 25px;
+  border: 2px solid #000000;
+  padding: 10px; 
+  width: 200px;
+  height: 15px; 
+}
