@@ -87,7 +87,7 @@ function createButtons() {
   urls.forEach(url => {
     const button = document.createElement('button');
     button.textContent = getCleanButtonText(url);
-    button.setAttribute('onclick', "go_to_page('"+url+")");
+    button.setAttribute('onclick', "go_to_page('"+url+"')");
     container.append(button);
   });
 }
