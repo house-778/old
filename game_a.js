@@ -630,16 +630,16 @@ function performSearch() {
   var fileLinks = games();
   var searchResultsDiv = document.getElementById('searchResults');
   searchResultsDiv.innerHTML = ""; 
-
   for (var i = 0; i < fileLinks.length; i++) {
     var fileName = fileLinks[i].name.toLowerCase();
-
     if (fileName.includes(searchQuery)) {
       var resultItem = document.createElement('button');
       resultItem.textContent = fileLinks[i].name;
-      resultItem.onclick = function() {
-        go_to_page(fileLinks[i].link);
-      };
+      (function(index) {
+        resultItem.onclick = function() {
+          go_to_page(fileLinks[index].link);
+        };
+      })(i);
       searchResultsDiv.appendChild(resultItem);
     }
   }
