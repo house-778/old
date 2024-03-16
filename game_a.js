@@ -632,14 +632,16 @@ function performSearch() {
   searchResultsDiv.innerHTML = ""; 
 
   for (var i = 0; i < fileLinks.length; i++) {
-      var fileName = fileLinks[i].name.toLowerCase();
+    var fileName = fileLinks[i].name.toLowerCase();
 
-      if (fileName.includes(searchQuery)) {
-        var resultItem = document.createElement('button');
-        resultItem.textContent = fileLinks[i].name;
-        resultItem.setAttribute("onclick", go_to_page(fileLinks.link[i]));
-        searchResultsDiv.appendChild(resultItem);
-      }
+    if (fileName.includes(searchQuery)) {
+      var resultItem = document.createElement('button');
+      resultItem.textContent = fileLinks[i].name;
+      resultItem.onclick = function() {
+        go_to_page(fileLinks[i].link);
+      };
+      searchResultsDiv.appendChild(resultItem);
+    }
   }
 }
 
