@@ -1,4 +1,4 @@
-Bside a {
+.Bside a {
   position: absolute;
   left: -80px;
   transition: 0.3s;
@@ -20,9 +20,6 @@ body.dark .qac { top: 80px; background-color: #124e80; }
 
 body.light .home { top: 20px; background-color: #02ffa2; }
 body.light .qac { top: 80px; background-color: #008cff; }
-
-body.red   .home { top: 20px; background-color: #FF5733; }
-body.red   .qac { top: 80px; background-color: #FF5733; }
 
 .Qaccess {
   height: 100%;
@@ -94,20 +91,6 @@ body.light #searchInput {
   cursor: pointer;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
-body.red button,
-body.red input[type=password],
-body.red input[type=text],
-body.red #searchInput {
-  background-color: #000000;
-  border: 1px solid #535353;
-  color: #ffffff;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
 iframe{
   width: 100%; 
   height: 100vh;
@@ -138,15 +121,6 @@ iframe{
   width: 100%;
   cursor: pointer;
   background: #fff;
-  background-size: 400% 400%;
-  overflow-x: hidden;
-  background-attachment: fixed;
-}
-.red{
-  height: 100vh;
-  width: 100%;
-  cursor: pointer;
-  background: #FF5733;
   background-size: 400% 400%;
   overflow-x: hidden;
   background-attachment: fixed;
