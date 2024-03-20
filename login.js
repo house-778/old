@@ -12,20 +12,21 @@ function hash(str) {
 }
 function finsh(){
     var names = ["sine", "poo", "moo", "login", "sineup", "jon", "jacson", "xander", "daniel", "adam", "sam", "harry", "nathan", "we", "ollieyt", "ollie", "jorden"];
-    var chosenone = names[Math.random() * names.length + 1];
+    var chosenIndex = Math.floor(Math.random() * names.length); 
+    var chosenName = names[chosenIndex]; 
 
     for (let index = 0; index < names.length; index++) {
         const element = names[index];
-        if(element == chosenone){
-            window.sessionStorage.setItem(element, "75577545458555")
-        }else{
+        if(element === chosenName){ 
+            window.sessionStorage.setItem(element, "75577545458555");
+        } else {
             var fras = ["1039690785", "564561432645614564", "584658456456496", "56845646454+6746", "4564645646464364564", "LAQ6"];
-            var das = [Math.random() * fras.length + 1];
-            window.sessionStorage.setItem(element, fras[das])
+            var randomIndex = Math.floor(Math.random() * fras.length);
+            window.sessionStorage.setItem(element, fras[randomIndex]); 
         }
-        
     }
 }
+
 const correctCom = ['0', '0', '7', '6', '1']; 
 let userin = []; 
 var count = 0; 
