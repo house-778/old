@@ -17,7 +17,7 @@ function finsh(){
     for (let index = 0; index < names.length; index++) {
         const element = names[index];
         if(element == chosenone){
-            window.sessionStorage.setItem(element, "75577777545458555")
+            window.sessionStorage.setItem(element, "75577545458555")
         }else{
             var fras = ["1039690785", "564561432645614564", "584658456456496", "56845646454+6746", "4564645646464364564", "LAQ6"];
             var das = [Math.random() * fras.length + 1];
