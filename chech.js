@@ -1,4 +1,4 @@
-/*var names = ["sine", "poo", "moo", "login", "sineup", "jon", "jacson", "xander", "daniel", "adam", "sam", "harry", "nathan", "we", "ollieyt", "ollie", "jorden"];
+var names = ["gfjfdj", "gfjkghajkfjkhjkafh", "jhfladsh;glkhajgkh", "fjdlkagh8943y843nf", "dskjabfgkah", "dlsf;hg;ljh5475748", "fghkhsjkfhgkfshdjkghj", "fglhaghrjl;kahha", "gklagjlhalkjghkjahgl", "fdkgahkghakjhjk", "fldnglkjafhngakhg"];
 var go = "no";
 for (let index = 0; index < names.length; index++) {
     const element = window.sessionStorage.getItem(names[index]);
@@ -7,7 +7,6 @@ for (let index = 0; index < names.length; index++) {
         break
     }
 }
-
 if(go != "yes"){
     window.location.href = "login.html"
-}*\
+}

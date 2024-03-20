@@ -11,7 +11,7 @@ function hash(str) {
     return hash;
 }
 function finsh(){
-    var names = ["sine", "poo", "moo", "login", "sineup", "jon", "jacson", "xander", "daniel", "adam", "sam", "harry", "nathan", "we", "ollieyt", "ollie", "jorden"];
+    var names = ["gfjfdj", "gfjkghajkfjkhjkafh", "jhfladsh;glkhajgkh", "fjdlkagh8943y843nf", "dskjabfgkah", "dlsf;hg;ljh5475748", "fghkhsjkfhgkfshdjkghj", "fglhaghrjl;kahha", "gklagjlhalkjghkjahgl", "fdkgahkghakjhjk", "fldnglkjafhngakhg"];
     var chosenIndex = Math.floor(Math.random() * names.length); 
     var chosenName = names[chosenIndex]; 
 
