@@ -23,9 +23,46 @@
     <button style = "height: 50px;" onclick='window.location.href = "tc.html";'><span class="material-symbols-outlined">gavel</span></button>
     <button onclick='window.location.href = "report.html";'><span class="material-symbols-outlined">bug_report</span></button>
     <button onclick='window.location.href = "game_list.html";'><span class="material-symbols-outlined">stadia_controller</span></button>
+    <button id="popupButton" onclick='window.location.href = "testgames.html";'><span class="material-symbols-outlined"><span class="material-symbols-outlined">code</span></span></button>
     <button id = "gra" style="float: right;" onclick='gra()'><span class="material-symbols-outlined">blur_on</span></button>
     <button id = "dark" style="float: right;" onclick='dark()'><span class="material-symbols-outlined">dark_mode</span></button>
     <button id = "light" style="float: right;" onclick='light()'><span class="material-symbols-outlined">light_mode</span></button>
+    <div id="myPopup" class="popup">
+      <p>Snow rider only in test mode</p>
+    </div>
+    <script>
+      const button = document.getElementById("popupButton");
+      const popup = document.getElementById("myPopup");
+      
+      popup.classList.toggle("active");
+      const buttonRect = button.getBoundingClientRect();
+      popup.style.top = buttonRect.bottom + "px";
+      popup.style.left = buttonRect.left + "px";
+      
+      document.addEventListener("click", function(event) {
+        const isClickInsidePopup = popup.contains(event.target);
+        if (!isClickInsidePopup) {
+          popup.classList.remove("active");
+        }
+      });
+    </script>
+    <style>
+      .popup {
+        position: absolute;
+        display: none;
+        background-color: #1a1f37;
+        border: 1px solid #000000;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .popup-content {
+        color: #ffffff;
+      }
+      .popup.active {
+        display: block;
+      }
+    </style>
     <hr>
 
   </div>
