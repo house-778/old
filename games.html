@@ -31,19 +31,21 @@
       <p>Snow rider only in test mode</p>
     </div>
     <script>
-      const button = document.getElementById("popupButton");
-      const popup = document.getElementById("myPopup");
-      
-      popup.classList.toggle("active");
-      const buttonRect = button.getBoundingClientRect();
-      popup.style.top = buttonRect.bottom + "px";
-      popup.style.left = buttonRect.left + "px";
-      
-      document.addEventListener("click", function(event) {
-        const isClickInsidePopup = popup.contains(event.target);
-        if (!isClickInsidePopup) {
-          popup.classList.remove("active");
-        }
+      document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("popupButton");
+        const popup = document.getElementById("myPopup");
+        
+        popup.classList.toggle("active");
+        const buttonRect = button.getBoundingClientRect();
+        popup.style.top = buttonRect.bottom + "px";
+        popup.style.left = buttonRect.left + "px";
+        
+        document.addEventListener("click", function(event) {
+          const isClickInsidePopup = popup.contains(event.target);
+          if (!isClickInsidePopup) {
+            popup.classList.remove("active");
+          }
+        });
       });
     </script>
     <style>
