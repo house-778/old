@@ -7,6 +7,6 @@ for (let index = 0; index < names.length; index++) {
         break;
     }
 }
-if (go == "yes") {
+if (go != "yes") {
     window.location.href = "login.html";
 }
