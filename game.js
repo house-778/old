@@ -60,11 +60,13 @@ function go_to_page(url){
   </div>
   <iframe style="width: 100%; height: 100vh;"  class="game-iframe" id="game-area" src="${url}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
   <script src="game_a.js"></script>
+  <script src="stop.js"></script>
   <script>
     function home(){
       window.location.reload();
     }
   </script>
+
 </body>
 </html>
   `;
