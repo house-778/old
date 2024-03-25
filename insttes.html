@@ -1,0 +1,34 @@
+<html>
+<body>
+  <h1>GitHub Insights</h1>
+  <div id="repoStats"></div>
+
+  <script>
+    async function fetchRepoStats(owner, repo) {
+      const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+      const data = await response.json();
+      return data;
+    }
+    async function displayRepoStats() {
+      const owner = 'your_username'; 
+      const repo = 'your_repository';
+
+      try {
+        const repoData = await fetchRepoStats(owner, repo);
+        const repoStatsElement = document.getElementById('repoStats');
+        repoStatsElement.innerHTML = `
+          <p>Repository: ${owner}/${repo}</p>
+          <p>Stars: ${repoData.stargazers_count}</p>
+          <p>Forks: ${repoData.forks_count}</p>
+          <p>Watchers: ${repoData.watchers_count}</p>
+          <p>Open Issues: ${repoData.open_issues_count}</p>
+          <p>Size: ${repoData.size} KB</p>
+        `;
+      } catch (error) {
+        console.error('Error fetching repository statistics:', error);
+      }
+    }
+    window.onload = displayRepoStats;
+  </script>
+</body>
+</html>
