@@ -33,68 +33,66 @@
   <div id="repoStats"></div>
 
   <script>
-    const { Octokit } = require("@octokit/core");
-
-    const token = process.env.YOUR_TOKEN;
+    const { Octokit } = Octokit.core;
 
     const octokit = new Octokit({
-      auth: token
+        auth: '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'
     });
 
     async function fetchRepoStats(owner, repo) {
-      try {
-        const response = await octokit.request('GET /repos/{owner}/{repo}', {
-          owner: owner,
-          repo: repo
-        });
+        try {
+            const response = await octokit.request('GET /repos/{owner}/{repo}', {
+                owner: owner,
+                repo: repo
+            });
 
-        return response.data;
-      } catch (error) {
-        console.error('Error fetching repository statistics:', error);
-        throw error;
-      }
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching repository statistics:', error);
+            throw error;
+        }
     }
 
     async function fetchTrafficData(owner, repo) {
-      try {
-        const response = await octokit.request('GET /repos/{owner}/{repo}/traffic/views', {
-          owner: owner,
-          repo: repo,
-          headers: {
-            'X-GitHub-Api-Version': '2022-11-28'
-          }
-        });
+        try {
+            const response = await octokit.request('GET /repos/{owner}/{repo}/traffic/views', {
+                owner: owner,
+                repo: repo,
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
 
-        return response.data;
-      } catch (error) {
-        console.error('Error fetching traffic data:', error);
-        throw error;
-      }
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching traffic data:', error);
+            throw error;
+        }
     }
 
     async function displayRepoStats() {
-      const owner = 'house-778';
-      const repo = 'house-778.github.io';
+        const owner = 'house-778';
+        const repo = 'house-778.github.io';
 
-      try {
-        const [repoData, trafficData] = await Promise.all([
-          fetchRepoStats(owner, repo),
-          fetchTrafficData(owner, repo)
-        ]);
+        try {
+            const [repoData, trafficData] = await Promise.all([
+                fetchRepoStats(owner, repo),
+                fetchTrafficData(owner, repo)
+            ]);
 
-        const repoStatsElement = document.getElementById('repoStats');
-        repoStatsElement.innerHTML = `
-          <p>Repository: ${owner}/${repo}</p>
-          <p>Stars: ${repoData.stargazers_count}</p>
-          <p>Forks: ${repoData.forks_count}</p>
-          <p>Watchers: ${repoData.watchers_count}</p>
-          <p>Open Issues: ${repoData.open_issues_count}</p>
-          <p>Size: ${repoData.size} KB</p>
-          <p>Unique Visitors: ${trafficData.uniques}</p>
-        `;
-      } catch (error) {
-        console.error('Error displaying repository statistics:', error);
-      }
+            const repoStatsElement = document.getElementById('repoStats');
+            repoStatsElement.innerHTML = `
+                <p>Repository: ${owner}/${repo}</p>
+                <p>Stars: ${repoData.stargazers_count}</p>
+                <p>Forks: ${repoData.forks_count}</p>
+                <p>Watchers: ${repoData.watchers_count}</p>
+                <p>Open Issues: ${repoData.open_issues_count}</p>
+                <p>Size: ${repoData.size} KB</p>
+                <p>Unique Visitors: ${trafficData.uniques}</p>
+            `;
+        } catch (error) {
+            console.error('Error displaying repository statistics:', error);
+        }
     }
 
     window.onload = displayRepoStats;
