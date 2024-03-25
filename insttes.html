@@ -10,16 +10,19 @@
         return data;
     }
     
+    async function fetchTrafficData(owner, repo) {
+        const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/traffic/views`);
+        const data = await response.json();
+        return data;
+    }
+    
     async function displayRepoStats() {
         const owner = 'house-778';
         const repo = 'house-778.github.io';
     
         try {
             const repoData = await fetchRepoStats(owner, repo);
-    
-            // Fetch traffic data separately
-            const trafficResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/traffic/views`);
-            const trafficData = await trafficResponse.json();
+            const trafficData = await fetchTrafficData(owner, repo);
     
             const repoStatsElement = document.getElementById('repoStats');
             repoStatsElement.innerHTML = `
@@ -38,6 +41,7 @@
     }
     
     window.onload = displayRepoStats;
+
 
   </script>
 </body>
