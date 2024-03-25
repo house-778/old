@@ -23,6 +23,8 @@
           <p>Watchers: ${repoData.watchers_count}</p>
           <p>Open Issues: ${repoData.open_issues_count}</p>
           <p>Size: ${repoData.size} KB</p>
+          <p>Total Views: ${trafficData.count}</p>
+          <p>Unique Visitors: ${trafficData.uniques}</p>
         `;
       } catch (error) {
         console.error('Error fetching repository statistics:', error);
