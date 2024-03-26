@@ -28,50 +28,82 @@
   <hr>
   <h1>GitHub Insights</h1>
   <div id="repoStats"></div>
-
-  <script>
-    async function fetchData(owner, repo, dataType) {
-      let url;
-      if (dataType === 'traffic') {
-          url = `https://api.github.com/repos/${owner}/${repo}/traffic/views`;
-      } else if (dataType === 'stats') {
-          url = `https://api.github.com/repos/${owner}/${repo}`;
-      } else {
-          throw new Error('Invalid data type. Use "traffic" or "stats".');
-      }
-  
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
+  <p class="circle">Stars: <span id="starsCount">${repoData.stargazers_count}</span></p>
+  <style>
+    .circle {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      padding: 10px;
     }
     
+    .circle span {
+      display: inline-block;
+      width: 40px; 
+      height: 40px; 
+      border-radius: 50%;
+      background-color: #ccc;
+      text-align: center;
+      line-height: 40px; /
+      transition: width 1s ease;
+      overflow: hidden;
+    }
+    
+    .circle span.fill {
+      width: calc(40px * (parseFloat(document.getElementById('starsCount').innerText) / 100)); /* Adjust as needed */
+      background-color: #007bff; /* Adjust as needed */
+      color: #fff; /* Adjust as needed */
+    }
+
+  </style>
+
+<script>
+    async function fetchData(owner, repo, dataType) {
+        let url;
+        if (dataType === 'traffic') {
+            url = `https://api.github.com/repos/${owner}/${repo}/traffic/views`;
+        } else if (dataType === 'stats') {
+            url = `https://api.github.com/repos/${owner}/${repo}`;
+        } else {
+            throw new Error('Invalid data type. Use "traffic" or "stats".');
+        }
+
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+
     async function displayRepoStats() {
         const owner = 'house-778';
         const repo = 'house-778.github.io';
-    
+
         try {
             const trafficData = await fetchData(owner, repo, 'traffic');
             const repoData = await fetchData(owner, repo, 'stats');
-    
+
             const repoStatsElement = document.getElementById('repoStats');
             repoStatsElement.innerHTML = `
                 <p>Repository: ${owner}/${repo}</p>
-                <p>Stars: ${repoData.stargazers_count}</p>
+                <p>Stars: <span id="starsCount">${repoData.stargazers_count}</span></p>
                 <p>Forks: ${repoData.forks_count}</p>
                 <p>Watchers: ${repoData.watchers_count}</p>
                 <p>Open Issues: ${repoData.open_issues_count}</p>
                 <p>Size: ${repoData.size} KB</p>
                 <p>Total Views: ${trafficData.count}</p>
             `;
+
+            const starsCountElement = document.getElementById('starsCount');
+            starsCountElement.classList.add('fill');
         } catch (error) {
             console.error('Error fetching repository statistics:', error);
         }
     }
+
     window.onload = async () => {
         await displayRepoStats();
     };
+</script>
 
-  </script>
   </body>
   <script src="background.js"></script>
   <script src="stop.js"></script>
