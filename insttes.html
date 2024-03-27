@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>House</title>
     <link rel="icon" type="image/x-icon" href="/imges/House-symbol-may-be-unfamiliar-to-users-with-low-computer-literacy.ico">
-</head>
-<body class="">
+  </head>
+  <script src="chech.js"></script>
 
-<div class="navebar">
+
+<body class = "">
+  <div class="navebar">
     <br>
     <button onclick='window.location.href = "games.html";'><span class="material-symbols-outlined">home</span></button>
-    <button style="height: 50px;" onclick='window.location.href = "tc.html";'><span class="material-symbols-outlined">gavel</span></button>
+    <button style = "height: 50px;" onclick='window.location.href = "tc.html";'><span class="material-symbols-outlined">gavel</span></button>
     <button onclick='window.location.href = "report.html";'><span class="material-symbols-outlined">bug_report</span></button>
     <button onclick='window.location.href = "game_list.html";'><span class="material-symbols-outlined">stadia_controller</span></button>
     <button id="popupButton" onclick='window.location.href = "testgames.html";'><span class="material-symbols-outlined"><span class="material-symbols-outlined">code</span></span></button>
-    <button onclick="window.location.href ='insttes.html'"><span class="material-symbols-outlined">search_insights</span></button>
 </div>
 <hr>
 <h1>GitHub Insights</h1>
@@ -24,9 +30,7 @@
 <div class="language-line" id="languageLine"></div>
 <ul id="languageList"></ul>
 
-<script src="chech.js"></script>
-<script src="background.js"></script>
-<script src="stop.js"></script>
+
 <script>
     async function fetchData(owner, repo, dataType) {
         let url;
@@ -98,5 +102,7 @@
         await displayRepoStats();
     };
 </script>
+<script src="background.js"></script>
+<script src="stop.js"></script>
 </body>
 </html>
