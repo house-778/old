@@ -83,7 +83,11 @@ function getStoredURLs() {
   return storedURLs ? JSON.parse(storedURLs) : [];
 }
 function getCleanButtonText(url) {
-  return url.split('/').pop().replace(/[-]/g, ' ').replace('_new.html', '');
+  var cleen = url.split('/').pop().replace(/[-]/g, ' ').replace('_new.html', '');
+  if(cleen == ""){
+    cleen = "snow rider";
+  }
+  return cleen
 }
 function createButtons() {
   const urls = getStoredURLs();
