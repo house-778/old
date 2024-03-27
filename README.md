@@ -36,7 +36,7 @@ House-778 is an open source project licensed under the [MIT License](https://ope
 
 ## Contact Us
 
-If you have any questions, concerns, or inquiries, feel free to reach out to us at [email@example.com](mailto:javapythoinfo@gmail.com). We're here to assist you and ensure you have the best possible gaming experience on House-778.
+If you have any questions, concerns, or inquiries, feel free to reach out to us at [hooouse.778@gmail.com](mailto:hooouse.778@gmail.com). We're here to assist you and ensure you have the best possible gaming experience on House-778.
 
 ## Website is blocked
 
