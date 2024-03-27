@@ -1,6 +1,5 @@
 # Welcome to House-778: Your Open Source Gaming Paradise!
 
-![House-778](https://example.com/paradise_logo.png)
 
 ## Overview
 
