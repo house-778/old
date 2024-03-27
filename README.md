@@ -39,6 +39,10 @@ House-778 is an open source project licensed under the [MIT License](https://ope
 
 If you have any questions, concerns, or inquiries, feel free to reach out to us at [email@example.com](mailto:javapythoinfo@gmail.com). We're here to assist you and ensure you have the best possible gaming experience on House-778.
 
+## Website is blocked
+
+If you find that the website is not unblocked contact use and we will see what we can do. Or you could fork this repo and host it your sellf.
+
 ## Other unblocked websites
 [house-777(brocken)](house-777.github.io)
 
