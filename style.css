@@ -23,7 +23,7 @@
 
 
 
-body.gra button,
+
 body.gra input[type=password],
 body.gra input[type=text],
 body.gra #searchInput {
@@ -37,9 +37,46 @@ body.gra #searchInput {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.gra button:hover {
+body.gra button {
+  position: relative;
+  background-color: #000000;
+  border: 1px solid #555555;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+body.gra button:after {
+  content: "";
+  background: #555555;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+body.gra button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+body.gra button:hover {
   transform: scale(1.1);
-  background-color: #555555;
+  background-color: #000000;
   border: 1px solid #ffffff;
   color: #ffffff;
   box-shadow: 4px 4px 10px rgba(250, 250, 250, 0.5);
