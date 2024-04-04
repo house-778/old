@@ -21,7 +21,7 @@
     <input id="pin" class="pinentry" type="password" placeholder="Pin">
     <button class="loginbutton" onclick="login()">Submit</button>
     
-    <p class = "little">Pressing submit you are agreeing to our <a href="tc.html"> Terms & Conditions</a></p>
+    <p class = "little">Pressing submit you are agreeing to our <a href="tc.html">Terms & Conditions</a></p>
     <style>
       .little{
         font-size: 0.575em;
@@ -35,7 +35,15 @@
      }
     </style>
 
-  </div>  
+  </div> 
+    <div id="popup-container" class="popup-container">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h1>We Now have 575 games</h1>
+        <p>Please report any games that dont work to our email:<br/><a style="color:white" href="mailto:hooouse.778@gmail.com">hooouse.778@gmail.com</a></p>
+    </div>
+    <script src="whatnew.js"></script>
+</div>
   <script src="login.js"></script>
 </body>
 <script src="background.js"></script>
