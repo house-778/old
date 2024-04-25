@@ -534,7 +534,7 @@ function createButtons() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   createButtons()
-  var place = document.getElementById("game_button");
+  var place = document.getElementById("buttonsContainer");
   for (let i = 0; i < url.length; i++) {
     const element = url[i];
     var buttonText = element.substring(element.lastIndexOf('/') + 1).replace(/-/g, '');
