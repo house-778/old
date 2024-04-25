@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var place = document.getElementById("buttonsContainer");
   for (let i = 0; i < url.length; i++) {
     const element = url[i];
-    var buttonText = element.substring(element.lastIndexOf('/') + 1).replace(/-/g, '');
+    var buttonText = element.substring(element.lastIndexOf('/') + 1).replace(/-/g, ' ');
     var button = document.createElement('button');
     button.id = i
     button.textContent = buttonText;
