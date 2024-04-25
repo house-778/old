@@ -537,7 +537,7 @@ function games(){
   return url
 }
 var place = document.getElementById("game_button");
-for (let i = 0; i < games.length; i++) {
+for (let i = 0; i < url.length; i++) {
   const element = array[i];
   var buttonText = element.substring(element.lastIndexOf('/') + 1).replace(/-/g, '');
   var button = document.createElement('button');
